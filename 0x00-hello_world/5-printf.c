@@ -4,7 +4,7 @@
  * Main - Entry point
  *
  * Return: Always 0 (Success)
- * Description: how to use printf in c
+ * Description: Function main() - printf to screen
  */
 
 int main(void)
