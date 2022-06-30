@@ -3,7 +3,9 @@
 /**
  * Main - Entry point
  *
- * Return : Always returns 0 (Success)
+ * Description: 'ALX Software Engineering'
+ *
+ * Return: Always returns 0 (Success)
  */
 
 int main(void)
