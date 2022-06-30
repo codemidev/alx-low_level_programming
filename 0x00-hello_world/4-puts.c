@@ -7,6 +7,7 @@
  * Description: prints string to screen
  */
 
+//this is a main function
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
