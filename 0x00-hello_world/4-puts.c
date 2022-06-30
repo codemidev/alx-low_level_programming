@@ -3,9 +3,8 @@
 /**
  * Main - Entry point
  *
- * Description: prints string to screen
- *
  * Return: Always returns 0 (Success)
+ * Description: prints string to screen
  */
 
 int main(void)
