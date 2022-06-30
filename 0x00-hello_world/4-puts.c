@@ -3,7 +3,7 @@
 /**
  * Main - Entry point
  *
- * Description: 'ALX Software Engineering'
+ * Description: prints string to screen
  *
  * Return: Always returns 0 (Success)
  */
