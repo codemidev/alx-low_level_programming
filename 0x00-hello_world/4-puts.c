@@ -1,5 +1,5 @@
 #include<stdio.h>
-/*
+/**
  * main - prints with put to the screen
  *
  * Return: Always 0 (Success)
