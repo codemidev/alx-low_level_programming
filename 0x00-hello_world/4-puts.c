@@ -1,10 +1,8 @@
-impjn#include<stdio.h>
-
+#include<stdio.h>
 /*
- * Main - Entry point
+ * main - prints with put to the screen
  *
  * Return: Always 0 (Success)
- * Description: Function main()  - prints string to screen
  */
 int main(void)
 {
