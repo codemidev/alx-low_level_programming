@@ -1,4 +1,5 @@
 #include<stdlib.h>
+#include<time.h>
 #include<stdio.h>
 /*
  * main - Prints random numbers thier corresponding operator state type
@@ -7,8 +8,12 @@
  */
 int main(void)
 {
-	int n = rand();
-	if (n > 0)
+	int n;
+
+	srand(time(0));
+	int n = rand() - RAND_MAX/2;
+
+	if(n > 0)
 	{
 		printf("%d is positive\n",n);
 	}
