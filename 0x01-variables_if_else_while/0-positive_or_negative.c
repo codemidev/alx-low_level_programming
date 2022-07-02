@@ -3,7 +3,8 @@
 #include<stdio.h>
 /* more headers goes there */
 
-/* Betty style doc for function main goes there */
+/*Betty style doc for function main goes there */
+
 /**
  * main - Prints random numbers thier corresponding operator state type
  * Return: Always 0(Success)
@@ -14,7 +15,6 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	
 	if (n > 0)
 	{
 		printf("%d is positive\n", n);
@@ -27,6 +27,6 @@ int main(void)
 	{
 		printf("%d is zero\n", n);
 	}
-	return(0);
+	return (0);
 }
 
