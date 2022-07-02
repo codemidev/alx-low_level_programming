@@ -1,12 +1,19 @@
-#include <stdio.h>
+/*
+*File: 3-print_alphabets.c
+*Auth: Julius Ochai
+*/
+
+#include<stdio.h>
 
 /**
- * main - Prints lower and uppercase alphabets
- * Return : Always 0 (Success)
- */
+ * main - main function
+ * Description: Prints lower and uppercase alphabets
+ * Return: Always 0
+*/
 int main(void)
 {
 	int ch, CH;
+
 	for (ch = 'a'; ch <= 'z'; ch++)
 		putchar(ch);
 	for (CH = 'A'; CH <= 'Z'; CH++)
