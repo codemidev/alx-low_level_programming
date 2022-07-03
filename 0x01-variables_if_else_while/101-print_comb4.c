@@ -6,9 +6,10 @@
 #include <stdio.h>
 
 /**
- * main - main function
- * Description: Prints all possible combinations of three digits..
- * Return : Always 0.
+ * main - Prints all possible combinations of three diffrent digits,
+ *	in ascending order, separated by comma followed by a space.
+ *
+ * Return : Always 0 (Success).
  */
 int main(void)
 {
