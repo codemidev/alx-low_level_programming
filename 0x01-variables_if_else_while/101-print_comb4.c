@@ -2,16 +2,12 @@
  * File: 101-print_comb4.c
  * Auth: Julius Ochai
  */
-
-#include <stdio.h>
+                                                                #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of three diffrent digits,
- *	in ascending order, separated by comma followed by a space.
- *
- * Return : Always 0 (Success).
- */
-int main(void)
+ * main - main function
+ * Return: 0                                                     */
+int main(void)/*this is the main function*/
 {
 	int digit1, digit2, digit3;
 
