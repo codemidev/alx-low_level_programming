@@ -1,13 +1,9 @@
-/*
- * File: 101-print_comb4.c
- * Auth: Julius Ochai
- */
-                                                                #include <stdio.h>
-
+#include <stdio.h>
 /**
  * main - main function
- * Return: 0                                                     */
-int main(void)/*this is the main function*/
+ * Return: 0
+ */
+int main(void)
 {
 	int digit1, digit2, digit3;
 
