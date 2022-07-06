@@ -2,7 +2,7 @@
 #define MAIN_H
 
 int _putchar(char c);
-void Printo(void);
+int main(void);
 
 #endif
 

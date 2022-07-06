@@ -1,17 +1,19 @@
 #include "main.h"
 
 /**
- * Printo - Prints to stdout
+ * main - Prints to stdout
  * Return: 0
+ * Description: Prints _putchar to stdout
  */
-void Printo(void)
+int main(void)
 {
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
+	char *cu = "_putchar";
+
+	while (*cu)
+	{
+	_putchar(*cu);
+	cu++;
+	}
 	_putchar('\n');
+	return (0);
 }
