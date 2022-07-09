@@ -1,15 +1,12 @@
 #include "main.h"
 
 /**
- * add - adds two number.
- * @numb1 : The first intergers to be added.
- * @numb2 : Second interger to be added.
+ * add - Adds two integers.
+ * @numb1: The first integer to be added.
+ * @numb2: The second integer to be added.
  *
- * Description : adds two interger.
- *
- * Return : The result of the addition.
+ * Return: The result of the addition.
  */
-
 int add(int numb1, int numb2)
 {
 	return (numb1 + numb2);
