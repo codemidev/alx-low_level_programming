@@ -7,20 +7,15 @@
  * @src: second string.
  * Return: Always 0.
  */
+
 char *_strcat(char *dest, char *src)
 {
-	int o = 0, p = 0;
+	int index = 0;
+	int dest_len = 0;
 
-	while (dest[o] != '\0')
-	{
-		o++;
-	}
-	while (src[p] != '\0')
-	{
-		dest[o] = srcl[p];
-		p++;
-		o++;
-	}
-	dest[o] = '\0';
+	while (dest[index++])
+		dest_len++;
+	for (index = 0; src[index]; index++)
+		dest[dest_len++] = src[index];
 	return (dest);
 }
