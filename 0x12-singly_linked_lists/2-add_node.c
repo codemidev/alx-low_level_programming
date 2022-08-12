@@ -1,85 +1,48 @@
-#include <stdio.h>
 #include "lists.h"
-#include <stddef.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
- * _strlen - function to get length of a string
- * @s: string
+ * _strlen - finds the length of a string
+ * @str: string to be searched
  *
- * Return: Length of a array of characters
+ * Return: length of the string
  */
-int _strlen(char *s)
+unsigned int _strlen(char *str)
 {
-	int i;
+	unsigned int i;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
+	for (i = 0; str[i]; i++)
+		;
 	return (i);
 }
-
 /**
- * _strdup - returns a pointer to a newly allocated space in memory, which
- * contains a copy of the string given as a parameter.
- * @str: string to copy
+ * add_node - add a node to the beginning of a linked list
+ * @head: double pointer to the head of a linked list
+ * @str: string to add to the new node
  *
- * Return: Pointer
+ * Return: pointer to the new node .
  */
-char *_strdup(const char *str)
-{
-	int l = 0, i;
-	char *s;
 
-	if (str == NULL)
-		return (0);
-
-	while (*(str + l))
-		l++;
-	s = malloc(sizeof(char) * l + 1);
-
-	if (s == 0)
-		return (0);
-	for (i = 0; i <= l; i++)
-		*(s + i) = *(str + i);
-	return (s);
-}
-
-/**
- * add_node - adds a new node at the beginning of a singly linked list
- * @head: pointer to head of singly linked list
- * @str: string to add as new node in list
- *
- * Return: the address of the new element, or NULL if it failed
- */
 list_t *add_node(list_t **head, const char *str)
 {
-	char *tmp;
+	list_t *newnode;
 
-	list_t *new_node = malloc(sizeof(list_t));
+	if (str == NULL)
+		return (NULL);
 
-	if (new_node == 0)
-		return (0);
-	if (str == 0)
+	newnode = (list_t *)malloc(sizeof(list_t));
+	if (newnode == NULL)
+		return (NULL);
+
+	newnode->str = strdup(str);
+	if (newnode->str == NULL)
 	{
-		new_node->str = 0;
-		new_node->len = 0;
+		free(newnode);
+		return (NULL);
 	}
-	else
-	{
-		tmp = _strdup(str);
-		if (tmp == 0)
-		{
-			free(new_node);
-			return (0);
-		}
-		new_node->str = tmp;
-		new_node->len = _strlen(tmp);
-	}
-
-	new_node->next = *head;
-	*head = new_node;
-	return (new_node);
+	newnode->len = _strlen(newnode->str);
+	newnode->next = *head;
+	*head = newnode;
+	return (newnode);
 }
