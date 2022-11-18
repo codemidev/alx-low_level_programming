@@ -1,15 +1,18 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- * _abs - Computes the absolute value of an intergal
- * @n: number to be computed
- * Return: 0
- *
- */
+* _abs - returns the absolute value of an integer
+* @n: the integer you want the absolute value of
+* Return: Returns the absolute value of n
+*/
 int _abs(int n)
 {
 	if (n >= 0)
+	{
 		return (n);
-	else
-		return (-n);
+	}
+	if (n < 0)
+	{
+		return ((n * -1));
+	}
+	return (0);
 }

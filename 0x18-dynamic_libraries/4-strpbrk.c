@@ -1,30 +1,39 @@
-#include "main.h"
+#include "holberton.h"
 /**
  * _strpbrk - searches a string for any of a set of bytes
- * @s: string
- * @accept: bytes to search
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * @s: the string
+ * @accept: the bytes
+ * Return: Where the bytes start to be found, or Null.
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int l, l2, i, j;
+	int i, k, pos, Z = 0;
 
-	l = 0, l2 = 0;
-	while (s[l] != '\0')
-		l++;
-	while (accept[l2] != '\0')
-		l2++;
-	for (i = 0; i < l; i++, s++)
+	for (i = 0; s[i] != '\0'; i++)
+		;
+
+	pos = i;
+
+	for (i = 0; accept[i] != '\0'; i++)
 	{
-		for (j = 0; j < l2; j++)
+		for (k = 0; s[k] != '\0'; k++)
 		{
-			if (*s == *(accept + j))
+			if (accept[i] == s[k])
 			{
-				return (s);
+				if (k <= pos)
+				{
+					pos = k;
+					Z = 1;
+				}
 			}
 		}
 	}
-	return (0);
+	if (Z == 1)
+	{
+		return (&s[pos]);
+	}
+	else
+	{
+		return (0);
+	}
 }

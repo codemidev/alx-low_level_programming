@@ -1,21 +1,22 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- * _strcpy - function that prints a copy of a string using pointers
- * @dest: the directions goal.
- * @src: brint the string to copy with pointers.
- * Return: xxx
+ * *_strcpy - copies the string pointed to by src including the terminating
+ * null byte \0, to the buffer pointed to by dest.
+ * @dest: the buffer
+ * @src: string being copied
+ * Return: dest
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i = 0, j;
+	char *cpyresult = dest;
 
-	while (src[i] != '\0')
-		i++;
-	j = i;
-	for (i = 0; i <= j; i++)
+	if ((dest != '\0') && (src != '\0'))
 	{
-		dest[i] = src[i];
+		while (*src != '\0')
+		{
+			*dest++ = *src++;
+		}
+		*dest = '\0';
 	}
-	return (dest);
+	return (cpyresult);
 }

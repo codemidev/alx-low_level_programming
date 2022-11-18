@@ -1,23 +1,18 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- **_strcmp - functions that compares two strings.
- *@dest: address of a string.
- *@src: address of the second string.
- *Return: a string.
+ * _strcmp - compares 2 strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: The ASCII difference
  */
-
-int _strcmp(char *dest, char *src)
+int _strcmp(char *s1, char *s2)
 {
-	int i = 0, j = 0;
-
-	while ((dest[i] != '\0' || src[i] != '\0') && j == 0)
+	while (*s1)
 	{
-		if (dest[i] != src[i])
-		{
-			j = (dest[i] - src[i]);
-		}
-		i++;
+		if (*s1 != *s2)
+			break;
+		s1++;
+		s2++;
 	}
-	return (j);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
